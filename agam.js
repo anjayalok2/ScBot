@@ -599,7 +599,21 @@ headerType: 4
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'tools':
-menu = *TOOLS*
+fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
+ fake = await getBuffer(fah)
+ menu =`${ucapanWaktu} ${pushname} 👋
+ 
+${tanda1} Owner : ${ownerName}
+${tanda1} Hit Today : ${totalhit} Hit
+${tanda1} Prefix : [ . ]
+${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
+${tanda1} Baterai : 99%
+${tanda1} Platform : LINUX
+${tanda1} Runtime : ${clockString(process.uptime())}
+${tanda1} Tanggal : ${tanggal}
+${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
+
+*TOOLS*
   
 ${tanda2} ${prefix}attp <text>
 ${tanda2} ${prefix}exif [text|text]
@@ -626,7 +640,21 @@ agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, con
 break
 case :'downloader'
 case 'downloadmenu':
-menu = *DOWNLOADER*
+fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
+ fake = await getBuffer(fah)
+ menu =`${ucapanWaktu} ${pushname} 👋
+ 
+${tanda1} Owner : ${ownerName}
+${tanda1} Hit Today : ${totalhit} Hit
+${tanda1} Prefix : [ . ]
+${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
+${tanda1} Baterai : 99%
+${tanda1} Platform : LINUX
+${tanda1} Runtime : ${clockString(process.uptime())}
+${tanda1} Tanggal : ${tanggal}
+${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
+
+*DOWNLOADER*
  
 ${tanda2} ${prefix}nhdl <code>
 ${tanda2} ${prefix}play <text>
@@ -652,7 +680,20 @@ headerType: 4
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'islammenu':
-menu = *ISLAM MENU*
+fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
+ fake = await getBuffer(fah)
+ menu =`${ucapanWaktu} ${pushname} 👋
+ 
+${tanda1} Owner : ${ownerName}
+${tanda1} Hit Today : ${totalhit} Hit
+${tanda1} Prefix : [ . ]
+${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
+${tanda1} Baterai : 99%
+${tanda1} Platform : LINUX
+${tanda1} Runtime : ${clockString(process.uptime())}
+${tanda1} Tanggal : ${tanggal}
+${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
+*ISLAM MENU*
 
 ${tanda2} ${prefix}listsurah
 ${tanda2} ${prefix}alquran
@@ -674,7 +715,21 @@ headerType: 4
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'ownermenu':
-menu = *OWNER*
+fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
+ fake = await getBuffer(fah)
+ menu =`${ucapanWaktu} ${pushname} 👋
+ 
+${tanda1} Owner : ${ownerName}
+${tanda1} Hit Today : ${totalhit} Hit
+${tanda1} Prefix : [ . ]
+${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
+${tanda1} Baterai : 99%
+${tanda1} Platform : LINUX
+${tanda1} Runtime : ${clockString(process.uptime())}
+${tanda1} Tanggal : ${tanggal}
+${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
+
+*OWNER*
  
 ${tanda2} ${prefix}public
 ${tanda2} ${prefix}self
@@ -703,7 +758,21 @@ headerType: 4
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'searchmenu':
-menu =  *SEARCH*
+fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
+ fake = await getBuffer(fah)
+ menu =`${ucapanWaktu} ${pushname} 👋
+ 
+${tanda1} Owner : ${ownerName}
+${tanda1} Hit Today : ${totalhit} Hit
+${tanda1} Prefix : [ . ]
+${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
+${tanda1} Baterai : 99%
+${tanda1} Platform : LINUX
+${tanda1} Runtime : ${clockString(process.uptime())}
+${tanda1} Tanggal : ${tanggal}
+${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
+
+*SEARCH*
  
 ${tanda2} ${prefix}image <text>
 ${tanda2} ${prefix}google <text>
@@ -725,7 +794,21 @@ headerType: 4
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'sessionmenu':
-menu =  *SESSION*
+fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
+ fake = await getBuffer(fah)
+ menu =`${ucapanWaktu} ${pushname} 👋
+ 
+${tanda1} Owner : ${ownerName}
+${tanda1} Hit Today : ${totalhit} Hit
+${tanda1} Prefix : [ . ]
+${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
+${tanda1} Baterai : 99%
+${tanda1} Platform : LINUX
+${tanda1} Runtime : ${clockString(process.uptime())}
+${tanda1} Tanggal : ${tanggal}
+${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
+
+*SESSION*
  
 ${tanda2} ${prefix}ping
 ${tanda2} ${prefix}runtime
@@ -748,7 +831,21 @@ headerType: 4
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'funmenu':
-menu = *FUN MENU*
+fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
+ fake = await getBuffer(fah)
+ menu =`${ucapanWaktu} ${pushname} 👋
+ 
+${tanda1} Owner : ${ownerName}
+${tanda1} Hit Today : ${totalhit} Hit
+${tanda1} Prefix : [ . ]
+${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
+${tanda1} Baterai : 99%
+${tanda1} Platform : LINUX
+${tanda1} Runtime : ${clockString(process.uptime())}
+${tanda1} Tanggal : ${tanggal}
+${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
+
+*FUN MENU*
 
 ${tanda2} ${prefix}darkjokes
 ${tanda2} ${prefix}family100
@@ -773,7 +870,21 @@ headerType: 4
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'animemenu':
-menu =  *IMAGE + ANIME*
+fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
+ fake = await getBuffer(fah)
+ menu =`${ucapanWaktu} ${pushname} 👋
+ 
+${tanda1} Owner : ${ownerName}
+${tanda1} Hit Today : ${totalhit} Hit
+${tanda1} Prefix : [ . ]
+${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
+${tanda1} Baterai : 99%
+${tanda1} Platform : LINUX
+${tanda1} Runtime : ${clockString(process.uptime())}
+${tanda1} Tanggal : ${tanggal}
+${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
+
+ *IMAGE + ANIME*
  
 ${tanda2} ${prefix}waifu
 ${tanda2} ${prefix}loli
@@ -796,7 +907,21 @@ headerType: 4
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'grupmenu':
-menu = *GROUP*
+fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
+ fake = await getBuffer(fah)
+ menu =`${ucapanWaktu} ${pushname} 👋
+ 
+${tanda1} Owner : ${ownerName}
+${tanda1} Hit Today : ${totalhit} Hit
+${tanda1} Prefix : [ . ]
+${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
+${tanda1} Baterai : 99%
+${tanda1} Platform : LINUX
+${tanda1} Runtime : ${clockString(process.uptime())}
+${tanda1} Tanggal : ${tanggal}
+${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
+
+*GROUP*
  
 ${tanda2} ${prefix}kick
 ${tanda2} ${prefix}add
