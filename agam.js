@@ -478,8 +478,6 @@ ${tanda2}  Name Bot : ${NameBot}
 ${tanda2} Lib : Baileys 
 ${tanda2}  Type : NodeJS
 
-TIME ZONE
-${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
 "buttonText": "MENU",
 "listType": "SINGLE_SELECT",
 "sections": [
