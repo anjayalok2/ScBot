@@ -463,6 +463,97 @@ headerType: 6
 }
 agam.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 } 
+case 'menu':
+case 'help':
+case 'p':
+                          res = await zero.prepareMessageFromContent(from,{
+"listMessage": {
+"title": ' INFO USER ',
+"description": `Nama : ${pushname}
+Nomer : @${sender.split('@')[0]}
+
+ INFO BOT 
+Creator Bot : '©Created By LeonGanz'
+ Prefix :    ${prefix}  
+ Name Bot : ${NameBot}
+ Runtime : ${runtime(process.uptime())}
+ Speed : ${latensyi.toFixed(4)} Second
+ Lib : Baileys 
+ Type : NodeJS
+
+TIME ZONE
+${wib} WIB
+${wita} WITA
+${wit} WIT`,
+"buttonText": "",
+"listType": "SINGLE_SELECT",
+"sections": [
+{
+"title": `${hari} - ${tanggal} - ${bulan} - ${tahun}`,
+    "rows": [ 
+       {
+           "title": "Tools",
+           "rowId": `tools`
+           },
+	       {
+           "title": "Download Menu",
+           "rowId": `downloadmenu`
+           },
+	       {
+           "title": "Islam Menu",
+           "rowId": `islammenu`
+           },
+	       {
+	       "title": "Menu Owner",
+           "rowId": `ownermenu`
+           },
+           {
+	       "title": "Search Menu",
+           "rowId": `searchmenu`
+           },
+           {
+           "title": "Session Menu",
+           "rowId": `sessionmenu`
+           },
+           {
+           "title": "Fun Menu",
+           "rowId": `funmenu`
+           },
+           {
+	       "title": "Wibu Menu",
+           "rowId": `animemenu`
+           },
+           {
+           "title": "Script Bot",
+           "rowId": `sc`
+           },
+           {
+           "title": "All Menu",
+           "rowId": `allmenu`
+           },
+           {
+           "title": "Owner Bot",
+           "rowId": `owner`
+           },
+	       {
+           "title": "Grup Menu",
+           "rowId": `grupmenu`
+           },
+           {
+           "title": "Thanks To",
+           "rowId": `thanks`
+           },
+           {
+           "title": "S&K",
+           "rowId": `s&k`
+           }
+        ]
+      }
+    ]
+  }
+ }, {quoted: ftroli})
+ agam.relayWAMessage(res)
+ break
 case 'allmenu':
  fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
  fake = await getBuffer(fah)
@@ -946,6 +1037,34 @@ rules = `*PERATURAN BOT *
 
 JIKA KALIAN MELANGGAR.. AKAN DI BLOCK + BANNED!!`
 break
+case 'thanks':
+                        
+               `Spesial Thanks To`                
+               buttons = [{buttonId: `mypartner`,buttonText:{displayText: 'Partner Bot'},type:1},{buttonId:`owner`,buttonText:{displayText:'Owner'},type:1}]
+				               locatione = (await pinnexe.prepareMessageFromContent(from, {"locationMessage": { "degreesLatitude": 0, "degreesLongitude": 0}}, {thumbnail:fs.readFileSync('./media/Nakano.jpg')})).message.locationMessage
+   
+               buttonsMessage = {
+               contentText: `${txtt}`,
+               footerText: `* Developer*
+**
+*• thanks to Allah*
+*• thanks to  ${fakeyoi}*
+*• thanks to Melsha-Chan*
+*• thanks to zeeone*
+*• thanks to kurrxd*
+*• thanks to mr.bl00d*
+*• thanks to putri*
+*• Thanks To all creator*
+* •*
+©Yui-Chan@^3.0.0`,
+               locationMessage: locatione,
+               buttons: buttons,
+               headerType: 6
+}
+
+               prep = await pinnexe.prepareMessageFromContent(from,{buttonsMessage},{})
+               pinnexe.relayWAMessage(prep)
+               break  
 //------------------< Public/Self >-------------------
         case 'public':
         if (!mek.key.fromMe && !isOwner) return 
