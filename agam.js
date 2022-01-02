@@ -630,12 +630,7 @@ gbutsan = [
 {buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
 ]
 mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-footerText: `${botName}`,
-buttons: gbutsan,
-headerType: 4
-}
+
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case :'downloader'
@@ -671,12 +666,7 @@ gbutsan = [
 {buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
 ]
 mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-footerText: `${botName}`,
-buttons: gbutsan,
-headerType: 4
-}
+
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'islammenu':
@@ -706,12 +696,7 @@ gbutsan = [
 {buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
 ]
 mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-footerText: `${botName}`,
-buttons: gbutsan,
-headerType: 4
-}
+
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'ownermenu':
@@ -749,12 +734,7 @@ gbutsan = [
 {buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
 ]
 mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-footerText: `${botName}`,
-buttons: gbutsan,
-headerType: 4
-}
+
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'searchmenu':
@@ -785,12 +765,7 @@ gbutsan = [
 {buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
 ]
 mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-footerText: `${botName}`,
-buttons: gbutsan,
-headerType: 4
-}
+
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'sessionmenu':
@@ -822,12 +797,7 @@ gbutsan = [
 {buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
 ]
 mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-footerText: `${botName}`,
-buttons: gbutsan,
-headerType: 4
-}
+
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'funmenu':
@@ -861,12 +831,7 @@ gbutsan = [
 {buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
 ]
 mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-footerText: `${botName}`,
-buttons: gbutsan,
-headerType: 4
-}
+
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'animemenu':
@@ -898,12 +863,7 @@ gbutsan = [
 {buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
 ]
 mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-footerText: `${botName}`,
-buttons: gbutsan,
-headerType: 4
-}
+
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 case 'grupmenu':
@@ -936,12 +896,7 @@ gbutsan = [
 {buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
 ]
 mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-footerText: `${botName}`,
-buttons: gbutsan,
-headerType: 4
-}
+
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
 
