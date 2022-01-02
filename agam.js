@@ -463,7 +463,6 @@ headerType: 6
 }
 agam.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 } 
-           case 'menu'
 case 'allmenu':
  fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
  fake = await getBuffer(fah)
