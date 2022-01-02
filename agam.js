@@ -633,7 +633,6 @@ mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2}
 
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
-case :'downloader'
 case 'downloadmenu':
 fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
  fake = await getBuffer(fah)
