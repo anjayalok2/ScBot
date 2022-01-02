@@ -120,6 +120,7 @@ let setting = JSON.parse(fs.readFileSync('./setting.json'))
 prefix = setting.prefix
 owner = setting.owner
 
+
 // Database
 let welkom = JSON.parse(fs.readFileSync('./database/welcome.json'))
 let _scommand = JSON.parse(fs.readFileSync('./database/scommand.json'))
@@ -205,6 +206,7 @@ module.exports = agam = async (agam, mek) => {
 		const type = Object.keys(mek.message)[0]        
         const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
         body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'videoMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'extendedTextMessage') && mek.message[type].text.startsWith(prefix) ? mek.message[type].text : (type == 'listResponseMessage') && mek.message[type].singleSelectReply.selectedRowId ? mek.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : (type == 'stickerMessage') && (getCmd(mek.message[type].fileSha256.toString('base64')) !== null && getCmd(mek.message[type].fileSha256.toString('base64')) !== undefined) ? getCmd(mek.message[type].fileSha256.toString('base64')) : ""
+        body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'videoMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'extendedTextMessage') && mek.message[type].text.startsWith(prefix) ? mek.message[type].text : (type == 'listResponseMessage') && mek.message[type].singleSelectReply.selectedRowId ? mek.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : ''
 		budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 		const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
 		const args = body.trim().split(/ +/).slice(1)
@@ -463,88 +465,8 @@ headerType: 6
 }
 agam.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 } 
-case 'menu':
-case 'help':
-case 'p':
-                          res = await agam.prepareMessageFromContent(from,{
-"listMessage": {
-"title": ' INFO USER ',
-"description": `Nama : ${pushname}
-
- INFO BOT 
-${tanda2} Creator Bot : '©Created By LeonGanz'
-${tanda2}  Prefix :    ${prefix}  
-${tanda2}  Name Bot : ${NameBot}
-${tanda2} Lib : Baileys 
-${tanda2}  Type : NodeJS
-
-"buttonText": "MENU",
-"listType": "SINGLE_SELECT",
-"sections": [
-       {
-           "title": "Tools",
-           "rowId": `tools`
-           },
-	       {
-           "title": "Download Menu",
-           "rowId": `downloadmenu`
-           },
-	       {
-           "title": "Islam Menu",
-           "rowId": `islammenu`
-           },
-	       {
-	       "title": "Menu Owner",
-           "rowId": `ownermenu`
-           },
-           {
-	       "title": "Search Menu",
-           "rowId": `searchmenu`
-           },
-           {
-           "title": "Session Menu",
-           "rowId": `sessionmenu`
-           },
-           {
-           "title": "Fun Menu",
-           "rowId": `funmenu`
-           },
-           {
-	       "title": "Wibu Menu",
-           "rowId": `animemenu`
-           },
-           {
-           "title": "Script Bot",
-           "rowId": `sc`
-           },
-           {
-           "title": "All Menu",
-           "rowId": `allmenu`
-           },
-           {
-           "title": "Owner Bot",
-           "rowId": `owner`
-           },
-	       {
-           "title": "Grup Menu",
-           "rowId": `grupmenu`
-           },
-           {
-           "title": "Thanks To",
-           "rowId": `thanks`
-           },
-           {
-           "title": "S&K",
-           "rowId": `s&k`
-           }
-        ]
-      }
-    ]
-  }
- }, {quoted: ftroli})
- agam.relayWAMessage(res)
- break
 case 'allmenu':
+case 'menu':
  fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
  fake = await getBuffer(fah)
  menu =`${ucapanWaktu} ${pushname} ðŸ‘‹
@@ -679,306 +601,7 @@ headerType: 4
 }
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
-case 'tools':
-fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
- fake = await getBuffer(fah)
- menu =`${ucapanWaktu} ${pushname} ðŸ‘‹
- 
-${tanda1} Owner : ${ownerName}
-${tanda1} Hit Today : ${totalhit} Hit
-${tanda1} Prefix : [ . ]
-${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
-${tanda1} Baterai : 99%
-${tanda1} Platform : LINUX
-${tanda1} Runtime : ${clockString(process.uptime())}
-${tanda1} Tanggal : ${tanggal}
-${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
 
-*TOOLS*
-  
-${tanda2} ${prefix}attp <text>
-${tanda2} ${prefix}exif [text|text]
-${tanda2} ${prefix}nulis <text>
-${tanda2} ${prefix}sticker reply/caption
-${tanda2} ${prefix}tourl reply/caption
-${tanda2} ${prefix}toimg reply/caption
-${tanda2} ${prefix}tomp3 reply/caption
-${tanda2} ${prefix}tovideo reply/caption
-${tanda2} ${prefix}telesticker
-${tanda2} ${prefix}ssweb <url>
-`
-gbutsan = [
-{buttonId:`owner`,buttonText:{displayText:'OWNER ðŸ‘¤'},type:1}
-]
-mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-
-agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
-break
-case 'downloadmenu':
-fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
- fake = await getBuffer(fah)
- menu =`${ucapanWaktu} ${pushname} ðŸ‘‹
- 
-${tanda1} Owner : ${ownerName}
-${tanda1} Hit Today : ${totalhit} Hit
-${tanda1} Prefix : [ . ]
-${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
-${tanda1} Baterai : 99%
-${tanda1} Platform : LINUX
-${tanda1} Runtime : ${clockString(process.uptime())}
-${tanda1} Tanggal : ${tanggal}
-${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
-
-*DOWNLOADER*
- 
-${tanda2} ${prefix}nhdl <code>
-${tanda2} ${prefix}play <text>
-${tanda2} ${prefix}igdl <url>
-${tanda2} ${prefix}igstory <url>
-${tanda2} ${prefix}tiktok <url>
-${tanda2} ${prefix}tiktoknowm <url>
-${tanda2} ${prefix}tiktokmp3 <url>
-${tanda2} ${prefix}mediafire <url>
-${tanda2} ${prefix}facebook <url>
-${tanda2} ${prefix}youtubedl <url>
-`
-gbutsan = [
-{buttonId:`owner`,buttonText:{displayText:'OWNER ðŸ‘¤'},type:1}
-]
-mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-
-agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
-break
-case 'islammenu':
-fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
- fake = await getBuffer(fah)
- menu =`${ucapanWaktu} ${pushname} ðŸ‘‹
- 
-${tanda1} Owner : ${ownerName}
-${tanda1} Hit Today : ${totalhit} Hit
-${tanda1} Prefix : [ . ]
-${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
-${tanda1} Baterai : 99%
-${tanda1} Platform : LINUX
-${tanda1} Runtime : ${clockString(process.uptime())}
-${tanda1} Tanggal : ${tanggal}
-${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
-*ISLAM MENU*
-
-${tanda2} ${prefix}listsurah
-${tanda2} ${prefix}alquran
-${tanda2} ${prefix}alquranaudio
-${tanda2} ${prefix}asmaulhusna
-${tanda2} ${prefix}kisahnabi
-${tanda2} ${prefix}jadwalsholat
-`
-gbutsan = [
-{buttonId:`owner`,buttonText:{displayText:'OWNER ðŸ‘¤'},type:1}
-]
-mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-
-agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
-break
-case 'ownermenu':
-fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
- fake = await getBuffer(fah)
- menu =`${ucapanWaktu} ${pushname} ðŸ‘‹
- 
-${tanda1} Owner : ${ownerName}
-${tanda1} Hit Today : ${totalhit} Hit
-${tanda1} Prefix : [ . ]
-${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
-${tanda1} Baterai : 99%
-${tanda1} Platform : LINUX
-${tanda1} Runtime : ${clockString(process.uptime())}
-${tanda1} Tanggal : ${tanggal}
-${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
-
-*OWNER*
- 
-${tanda2} ${prefix}public
-${tanda2} ${prefix}self
-${tanda2} ${prefix}join
-${tanda2} ${prefix}exif
-${tanda2} ${prefix}term
-${tanda2} ${prefix}shutdown
-${tanda2} ${prefix}leaveall
-${tanda2} ${prefix}setprefix
-${tanda2} ${prefix}cekapikey
-${tanda2} ${prefix}setcmd
-${tanda2} ${prefix}delcmd
-${tanda2} ${prefix}listcmd
-${tanda2} ${prefix}tospam
-`
-gbutsan = [
-{buttonId:`owner`,buttonText:{displayText:'OWNER ðŸ‘¤'},type:1}
-]
-mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-
-agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
-break
-case 'searchmenu':
-fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
- fake = await getBuffer(fah)
- menu =`${ucapanWaktu} ${pushname} ðŸ‘‹
- 
-${tanda1} Owner : ${ownerName}
-${tanda1} Hit Today : ${totalhit} Hit
-${tanda1} Prefix : [ . ]
-${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
-${tanda1} Baterai : 99%
-${tanda1} Platform : LINUX
-${tanda1} Runtime : ${clockString(process.uptime())}
-${tanda1} Tanggal : ${tanggal}
-${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
-
-*SEARCH*
- 
-${tanda2} ${prefix}image <text>
-${tanda2} ${prefix}google <text>
-${tanda2} ${prefix}pinterest <text>
-${tanda2} ${prefix}ytdesc <text>
-${tanda2} ${prefix}ghsearch <text>
-${tanda2} ${prefix}brainly <text>
-`
-gbutsan = [
-{buttonId:`owner`,buttonText:{displayText:'OWNER ðŸ‘¤'},type:1}
-]
-mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-
-agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
-break
-case 'sessionmenu':
-fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
- fake = await getBuffer(fah)
- menu =`${ucapanWaktu} ${pushname} ðŸ‘‹
- 
-${tanda1} Owner : ${ownerName}
-${tanda1} Hit Today : ${totalhit} Hit
-${tanda1} Prefix : [ . ]
-${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
-${tanda1} Baterai : 99%
-${tanda1} Platform : LINUX
-${tanda1} Runtime : ${clockString(process.uptime())}
-${tanda1} Tanggal : ${tanggal}
-${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
-
-*SESSION*
- 
-${tanda2} ${prefix}ping
-${tanda2} ${prefix}runtime
-${tanda2} ${prefix}donasi
-${tanda2} ${prefix}sc
-${tanda2} ${prefix}jadibot
-${tanda2} ${prefix}stopjadibot
-${tanda2} ${prefix}listjadibot
-`
-gbutsan = [
-{buttonId:`owner`,buttonText:{displayText:'OWNER ðŸ‘¤'},type:1}
-]
-mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-
-agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
-break
-case 'funmenu':
-fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
- fake = await getBuffer(fah)
- menu =`${ucapanWaktu} ${pushname} ðŸ‘‹
- 
-${tanda1} Owner : ${ownerName}
-${tanda1} Hit Today : ${totalhit} Hit
-${tanda1} Prefix : [ . ]
-${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
-${tanda1} Baterai : 99%
-${tanda1} Platform : LINUX
-${tanda1} Runtime : ${clockString(process.uptime())}
-${tanda1} Tanggal : ${tanggal}
-${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
-
-*FUN MENU*
-
-${tanda2} ${prefix}darkjokes
-${tanda2} ${prefix}family100
-${tanda2} ${prefix}tebakgambar
-${tanda2} ${prefix}caklontong
-${tanda2} ${prefix}rate
-${tanda2} ${prefix}kapankah
-${tanda2} ${prefix}apakah
-${tanda2} ${prefix}bisakah
-${tanda2} ${prefix}caripesan [ _teks|jumlah_ ] 
-`
-gbutsan = [
-{buttonId:`owner`,buttonText:{displayText:'OWNER ðŸ‘¤'},type:1}
-]
-mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-
-agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
-break
-case 'animemenu':
-fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
- fake = await getBuffer(fah)
- menu =`${ucapanWaktu} ${pushname} ðŸ‘‹
- 
-${tanda1} Owner : ${ownerName}
-${tanda1} Hit Today : ${totalhit} Hit
-${tanda1} Prefix : [ . ]
-${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
-${tanda1} Baterai : 99%
-${tanda1} Platform : LINUX
-${tanda1} Runtime : ${clockString(process.uptime())}
-${tanda1} Tanggal : ${tanggal}
-${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
-
- *IMAGE + ANIME*
- 
-${tanda2} ${prefix}waifu
-${tanda2} ${prefix}loli
-${tanda2} ${prefix}husbu
-${tanda2} ${prefix}milf
-${tanda2} ${prefix}cosplay
-${tanda2} ${prefix}wallml
-${tanda2} ${prefix}kusonime <link kusonime>
-`
-gbutsan = [
-{buttonId:`owner`,buttonText:{displayText:'OWNER ðŸ‘¤'},type:1}
-]
-mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-
-agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
-break
-case 'grupmenu':
-fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
- fake = await getBuffer(fah)
- menu =`${ucapanWaktu} ${pushname} ðŸ‘‹
- 
-${tanda1} Owner : ${ownerName}
-${tanda1} Hit Today : ${totalhit} Hit
-${tanda1} Prefix : [ . ]
-${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
-${tanda1} Baterai : 99%
-${tanda1} Platform : LINUX
-${tanda1} Runtime : ${clockString(process.uptime())}
-${tanda1} Tanggal : ${tanggal}
-${tanda1} Waktu : ${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
-
-*GROUP*
- 
-${tanda2} ${prefix}kick
-${tanda2} ${prefix}add
-${tanda2} ${prefix}culik
-${tanda2} ${prefix}kickall
-${tanda2} ${prefix}leaveall
-${tanda2} ${prefix}tagall
-${tanda2} ${prefix}hidetag
-${tanda2} ${prefix}welcome
-`
-gbutsan = [
-{buttonId:`owner`,buttonText:{displayText:'OWNER ðŸ‘¤'},type:1}
-]
-mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
-
-agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
-break
 
 
        
@@ -1385,9 +1008,9 @@ _*Tunggu Proses Upload Media......*_`
   if (args.length < 1) return reply('Pertanyaan apa')
 		          	brien = args.join(' ')
 					brainly(`${brien}`).then(res => {
-					teks = '\n'
+					teks = '—————————\n'
 					for (let Y of res.data) {
-					teks += `\n*_BRAINLY_ *\n\n* Pertanyaan:* ${Y.pertanyaan}\n\n* Jawaban:* ${Y.jawaban[0].text}\n\n`
+					teks += `\n*_BRAINLY_ *\n\n*Pertanyaan:* ${Y.pertanyaan}\n\n*Jawaban:* ${Y.jawaban[0].text}\n—————————\n`
 					}
 					agam.sendMessage(from, teks, text,{quoted:ftroli,detectLinks: false})                        
 		            })              
