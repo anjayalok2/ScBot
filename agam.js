@@ -960,7 +960,7 @@ _*Tunggu Proses Upload Media......*_`
               case 'kusonime':
              if (args.length == 0) return reply(`Example: ${prefix + command} https://kusonime.com/nanatsu-no-taizai-bd-batch-subtitle-indonesia/`)
              query = args.join(" ")
-             get_result = await fetchJson(`https://api.lolhuman.xyz/api/kusonime?apikey=e54205a4ca2caa368cc067bb&url=${query}`)
+             get_result = await fetchJson(`https://api.lolhuman.xyz/api/kusonime?apikey=xyannapi&url=${query}`)
              get_result = get_result.result
              ini_txt = `Title : ${get_result.title}\n`
              ini_txt += `Japanese : ${get_result.japanese}\n`
@@ -1691,7 +1691,7 @@ case 'alquranaudio':
     if (args.length == 0) return reply(`Example: ${prefix + command} 18 or ${prefix + command} 18/10`)
     surah = args[0]
     ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/quran/audio/${surah}?apikey=${setting.lolkey}`)
-    await agam.sendMessage(from, ini_buffer, audio, { quoted: fg3, mimetype: Mimetype.mp4Audio })
+    await agam.sendMessage(from, ini_buffer, audio, { quoted: mek, mimetype: Mimetype.mp3Audio })
     break
 case 'asmaulhusna':
     get_result = await fetchJson(`https://api.lolhuman.xyz/api/asmaulhusna?apikey=${setting.lolkey}`)
