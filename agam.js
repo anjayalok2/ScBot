@@ -481,9 +481,6 @@ ${tanda2}  Type : NodeJS
 "buttonText": "MENU",
 "listType": "SINGLE_SELECT",
 "sections": [
-{
-"title": `${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}}`,
-    "rows": 'allmenu'
        {
            "title": "Tools",
            "rowId": `tools`
