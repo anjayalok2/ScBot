@@ -463,9 +463,8 @@ headerType: 6
 }
 agam.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 } 
-           
-case 'menu':
- case 'help':
+           case 'menu'
+case 'allmenu':
  fah = `https://i.ibb.co/p0p7nMZ/IMG-20211026-084119.jpg`
  fake = await getBuffer(fah)
  menu =`${ucapanWaktu} ${pushname} 👋
@@ -474,7 +473,7 @@ ${tanda1} Owner : ${ownerName}
 ${tanda1} Hit Today : ${totalhit} Hit
 ${tanda1} Prefix : [ . ]
 ${tanda1} Mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}
-${tanda1} Baterai : 99.
+${tanda1} Baterai : 99%
 ${tanda1} Platform : LINUX
 ${tanda1} Runtime : ${clockString(process.uptime())}
 ${tanda1} Tanggal : ${tanggal}
@@ -502,7 +501,9 @@ ${tanda2} ${prefix}nhdl <code>
 ${tanda2} ${prefix}play <text>
 ${tanda2} ${prefix}igdl <url>
 ${tanda2} ${prefix}igstory <url>
-${tanda2} ${prefix}tiktokdl <url>
+${tanda2} ${prefix}tiktok <url>
+${tanda2} ${prefix}tiktoknowm <url>
+${tanda2} ${prefix}tiktokmp3 <url>
 ${tanda2} ${prefix}mediafire <url>
 ${tanda2} ${prefix}facebook <url>
 ${tanda2} ${prefix}youtubedl <url>
@@ -598,9 +599,229 @@ headerType: 4
 }
 agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
 break
+case 'tools':
+menu = *TOOLS*
+  
+${tanda2} ${prefix}attp <text>
+${tanda2} ${prefix}exif [text|text]
+${tanda2} ${prefix}nulis <text>
+${tanda2} ${prefix}sticker reply/caption
+${tanda2} ${prefix}tourl reply/caption
+${tanda2} ${prefix}toimg reply/caption
+${tanda2} ${prefix}tomp3 reply/caption
+${tanda2} ${prefix}tovideo reply/caption
+${tanda2} ${prefix}telesticker
+${tanda2} ${prefix}ssweb <url>
+`
+gbutsan = [
+{buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
+]
+mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
+const btnmenu = {
+imageMessage: mhan.message.imageMessage,
+footerText: `${botName}`,
+buttons: gbutsan,
+headerType: 4
+}
+agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
+break
+case :'downloader'
+case 'downloadmenu':
+menu = *DOWNLOADER*
+ 
+${tanda2} ${prefix}nhdl <code>
+${tanda2} ${prefix}play <text>
+${tanda2} ${prefix}igdl <url>
+${tanda2} ${prefix}igstory <url>
+${tanda2} ${prefix}tiktok <url>
+${tanda2} ${prefix}tiktoknowm <url>
+${tanda2} ${prefix}tiktokmp3 <url>
+${tanda2} ${prefix}mediafire <url>
+${tanda2} ${prefix}facebook <url>
+${tanda2} ${prefix}youtubedl <url>
+`
+gbutsan = [
+{buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
+]
+mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
+const btnmenu = {
+imageMessage: mhan.message.imageMessage,
+footerText: `${botName}`,
+buttons: gbutsan,
+headerType: 4
+}
+agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
+break
+case 'islammenu':
+menu = *ISLAM MENU*
+
+${tanda2} ${prefix}listsurah
+${tanda2} ${prefix}alquran
+${tanda2} ${prefix}alquranaudio
+${tanda2} ${prefix}asmaulhusna
+${tanda2} ${prefix}kisahnabi
+${tanda2} ${prefix}jadwalsholat
+`
+gbutsan = [
+{buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
+]
+mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
+const btnmenu = {
+imageMessage: mhan.message.imageMessage,
+footerText: `${botName}`,
+buttons: gbutsan,
+headerType: 4
+}
+agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
+break
+case 'ownermenu':
+menu = *OWNER*
+ 
+${tanda2} ${prefix}public
+${tanda2} ${prefix}self
+${tanda2} ${prefix}join
+${tanda2} ${prefix}exif
+${tanda2} ${prefix}term
+${tanda2} ${prefix}shutdown
+${tanda2} ${prefix}leaveall
+${tanda2} ${prefix}setprefix
+${tanda2} ${prefix}cekapikey
+${tanda2} ${prefix}setcmd
+${tanda2} ${prefix}delcmd
+${tanda2} ${prefix}listcmd
+${tanda2} ${prefix}tospam
+`
+gbutsan = [
+{buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
+]
+mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
+const btnmenu = {
+imageMessage: mhan.message.imageMessage,
+footerText: `${botName}`,
+buttons: gbutsan,
+headerType: 4
+}
+agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
+break
+case 'searchmenu':
+menu =  *SEARCH*
+ 
+${tanda2} ${prefix}image <text>
+${tanda2} ${prefix}google <text>
+${tanda2} ${prefix}pinterest <text>
+${tanda2} ${prefix}ytdesc <text>
+${tanda2} ${prefix}ghsearch <text>
+${tanda2} ${prefix}brainly <text>
+`
+gbutsan = [
+{buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
+]
+mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
+const btnmenu = {
+imageMessage: mhan.message.imageMessage,
+footerText: `${botName}`,
+buttons: gbutsan,
+headerType: 4
+}
+agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
+break
+case 'sessionmenu':
+menu =  *SESSION*
+ 
+${tanda2} ${prefix}ping
+${tanda2} ${prefix}runtime
+${tanda2} ${prefix}donasi
+${tanda2} ${prefix}sc
+${tanda2} ${prefix}jadibot
+${tanda2} ${prefix}stopjadibot
+${tanda2} ${prefix}listjadibot
+`
+gbutsan = [
+{buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
+]
+mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
+const btnmenu = {
+imageMessage: mhan.message.imageMessage,
+footerText: `${botName}`,
+buttons: gbutsan,
+headerType: 4
+}
+agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
+break
+case 'funmenu':
+menu = *FUN MENU*
+
+${tanda2} ${prefix}darkjokes
+${tanda2} ${prefix}family100
+${tanda2} ${prefix}tebakgambar
+${tanda2} ${prefix}caklontong
+${tanda2} ${prefix}rate
+${tanda2} ${prefix}kapankah
+${tanda2} ${prefix}apakah
+${tanda2} ${prefix}bisakah
+${tanda2} ${prefix}caripesan [ _teks|jumlah_ ] 
+`
+gbutsan = [
+{buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
+]
+mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
+const btnmenu = {
+imageMessage: mhan.message.imageMessage,
+footerText: `${botName}`,
+buttons: gbutsan,
+headerType: 4
+}
+agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
+break
+case 'animemenu':
+menu =  *IMAGE + ANIME*
+ 
+${tanda2} ${prefix}waifu
+${tanda2} ${prefix}loli
+${tanda2} ${prefix}husbu
+${tanda2} ${prefix}milf
+${tanda2} ${prefix}cosplay
+${tanda2} ${prefix}wallml
+${tanda2} ${prefix}kusonime <link kusonime>
+`
+gbutsan = [
+{buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
+]
+mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
+const btnmenu = {
+imageMessage: mhan.message.imageMessage,
+footerText: `${botName}`,
+buttons: gbutsan,
+headerType: 4
+}
+agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
+break
+case 'grupmenu':
+menu = *GROUP*
+ 
+${tanda2} ${prefix}kick
+${tanda2} ${prefix}add
+${tanda2} ${prefix}culik
+${tanda2} ${prefix}kickall
+${tanda2} ${prefix}leaveall
+${tanda2} ${prefix}tagall
+${tanda2} ${prefix}hidetag
+${tanda2} ${prefix}welcome
+`
+gbutsan = [
+{buttonId:`owner`,buttonText:{displayText:'OWNER 👤'},type:1}
+]
+mhan = await agam.prepareMessage(from, agamimage, image, {thumbnail: agamimage2})
+const btnmenu = {
+imageMessage: mhan.message.imageMessage,
+footerText: `${botName}`,
+buttons: gbutsan,
+headerType: 4
+}
+agam.sendMessage(from, btnmenu, MessageType.buttonsMessage, {quoted: ftroli, contextInfo: {mentionedJid:[sender]}})
+break
 
 
-              break
        
 //------------------< Sticker Cmd >-------------------
            case 'addcmd': 
@@ -633,6 +854,20 @@ break
 }
               mentions(teksnyee, cemde, true)
               break
+              case 's&k':
+rules = `*PERATURAN BOT *
+
+1. DILARANG TELFON BOT!!
+2. DILARANG SPAM BOT
+3. DILARANG BERKATA KASAR
+4. DILARANG SPAM VIRTEX
+5. DILARANG TELEFON OWNER
+6. DILARANG SPAM GROUP
+7. DILARANG SPAM ADMIN
+8. DILARANG BERKATA KASAR DI GC
+
+JIKA KALIAN MELANGGAR.. AKAN DI BLOCK + BANNED!!`
+break
 //------------------< Public/Self >-------------------
         case 'public':
         if (!mek.key.fromMe && !isOwner) return 
