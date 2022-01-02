@@ -466,31 +466,26 @@ agam.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 case 'menu':
 case 'help':
 case 'p':
-                          res = await zero.prepareMessageFromContent(from,{
+                          res = await agam.prepareMessageFromContent(from,{
 "listMessage": {
 "title": ' INFO USER ',
 "description": `Nama : ${pushname}
-Nomer : @${sender.split('@')[0]}
 
  INFO BOT 
-Creator Bot : '©Created By LeonGanz'
- Prefix :    ${prefix}  
- Name Bot : ${NameBot}
- Runtime : ${runtime(process.uptime())}
- Speed : ${latensyi.toFixed(4)} Second
- Lib : Baileys 
- Type : NodeJS
+${tanda2} Creator Bot : '©Created By LeonGanz'
+${tanda2}  Prefix :    ${prefix}  
+${tanda2}  Name Bot : ${NameBot}
+${tanda2} Lib : Baileys 
+${tanda2}  Type : NodeJS
 
 TIME ZONE
-${wib} WIB
-${wita} WITA
-${wit} WIT`,
-"buttonText": "",
+${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}
+"buttonText": "MENU",
 "listType": "SINGLE_SELECT",
 "sections": [
 {
-"title": `${hari} - ${tanggal} - ${bulan} - ${tahun}`,
-    "rows": [ 
+"title": `${waktu.charAt(0).toUpperCase() + waktu.slice(1)} || ${time}}`,
+    "rows": 'allmenu'
        {
            "title": "Tools",
            "rowId": `tools`
