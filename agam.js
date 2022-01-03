@@ -960,9 +960,9 @@ _*Tunggu Proses Upload Media......*_`
               fs.unlinkSync(`./${sender}.jpeg`)
               break
               case 'storyanime':
-              anu = await fetchJson(`https://lolhuman.herokuapp.com/api/storynime?apikey=${setting.lolkey}`)
+              anu = await fetchJson(`https://api.lolhuman.xyz/api/storynime?apikey=${setting.lolkey}`)
               buffer = await getBuffer(anu.result)
-              leon.sendMessage(from, buffer, video, { quoted: fg3 })
+              leon.sendMessage(from, buffer, video, { quoted: mek})
               break
               case 'ppcp':
 case 'ppcouple':
